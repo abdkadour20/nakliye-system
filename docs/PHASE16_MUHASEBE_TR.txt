@@ -1,0 +1,17 @@
+PHASE 16 - Akıllı Finans Merkezi
+
+Bu sürümde Muhasebe ekranı profesyonel bir finans merkezine dönüştürüldü.
+
+Eklenenler:
+- Toplam ciro, tahsilat, açık alacak, gider, net kâr ve ortalama sefer KPI kartları
+- Bugün / son 7 gün / bu ay / tüm dönem filtreleri
+- Şoföre göre finans filtreleme
+- Ödeme durumuna göre filtreleme
+- Günlük ciro analizi
+- Tahsilat ve kâr oranı göstergeleri
+- Finansal uyarılar
+- Şoför finans performansı
+- En büyük alacaklar listesi
+- Son kasa hareketleri
+- Muhasebe Excel çıktısı
+- Responsive ve Dark Mode uyumlu tasarım

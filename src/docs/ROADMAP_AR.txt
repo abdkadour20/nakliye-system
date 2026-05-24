@@ -1,0 +1,64 @@
+خطة تحويل البرنامج إلى منتج تجاري كامل - تنفيذ على مراحل
+
+المرحلة 1: بنية Enterprise وتقسيم المشروع
+- إنشاء folders: components, pages, services, hooks, utils, store, config
+- فصل خدمات WhatsApp, PDF, Storage, Audit
+- تجهيز Firebase config example
+
+المرحلة 2: State Management
+- نقل data/users/drivers إلى Zustand أو Redux
+- تقليل حجم App.jsx
+
+المرحلة 3: PDF حقيقي
+- فواتير وسندات وتقارير PDF ثابتة بدون اختلاف Chrome
+
+المرحلة 4: Firebase كامل
+- Auth, Firestore, Storage, Realtime Sync
+
+المرحلة 5: Permissions Matrix
+- Admin, Accountant, Supervisor, Staff, Driver, Read-only
+
+المرحلة 6: Audit System
+- تسجيل كل عملية تعديل/حذف/طباعة/إرسال
+
+المرحلة 7: Accounting ERP
+- صندوق، سند قبض، سند صرف، كشف حساب، قيود
+
+المرحلة 8: Documents Archive
+- صور ومستندات وفيديو لكل رحلة
+
+المرحلة 9: OCR
+- قراءة بيانات من صورة السيارة أو الفاتورة
+
+المرحلة 10: Google Maps
+- Route, ETA, Distance, Tracking
+
+المرحلة 11: Driver App
+- لوحة سائق مستقلة أو PWA Driver Mode
+
+المرحلة 12: Push Notifications
+- Web Push / Telegram / Email / WhatsApp API
+
+المرحلة 13: AI Assistant
+- أوامر طبيعية للبحث والتقارير
+
+المرحلة 14: Executive Dashboard
+- KPI, Charts, Trends, Forecast
+
+المرحلة 15: Offline + Sync
+- IndexedDB + مزامنة عند عودة الإنترنت
+
+المرحلة 16: Security
+- Session timeout, device tracking, encryption strategy
+
+المرحلة 17: Themes
+- Corporate Blue, Executive Gold, Dark ERP, Minimal
+
+المرحلة 18: Multi Company
+- شركات وفروع متعددة
+
+المرحلة 19: API Layer
+- REST/GraphQL لاحقًا لتطبيقات خارجية
+
+المرحلة 20: SaaS Ready
+- اشتراكات، خطط، Tenant isolation, Billing

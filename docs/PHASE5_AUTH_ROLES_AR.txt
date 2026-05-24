@@ -1,0 +1,23 @@
+المرحلة 5 - تسجيل الدخول والصلاحيات
+
+ما الجديد:
+1) تحسين شاشة الدخول لتتعامل مع المستخدمين المتزامنين من Supabase.
+2) حفظ آخر وقت دخول للمستخدم.
+3) تسجيل دخول وخروج المستخدمين داخل جدول auth_activity_logs.
+4) إضافة دور جديد Muhasebe / محاسب.
+5) تجهيز app_users بأعمدة password_hash, active, permissions, last_login_at, session_count.
+
+طريقة التشغيل:
+1) افتح Supabase > SQL Editor.
+2) شغل الملف: db/phase5_auth_roles.sql
+3) شغل البرنامج:
+   npm install
+   npm start
+4) ادخل من المستخدم الحالي:
+   admin / 1234
+5) من Ayarlar > Kullanıcı ve Yetki Yönetimi أضف المستخدمين والصلاحيات.
+6) اضغط Cloud > Manuel Senkronize Et حتى تنتقل الحسابات إلى Supabase.
+
+ملاحظة مهمة:
+هذه المرحلة تؤسس نظام صلاحيات عملي فوق app_users.
+المرحلة التالية تكون Real-time Sync وتفعيل RLS آمن حسب company_id بعد تثبيت تسجيل الدخول.

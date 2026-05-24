@@ -1,0 +1,29 @@
+المرحلة الثانية: ربط البيانات الأساسية مع Supabase + Offline Sync
+
+ما الذي أضيف؟
+1) خدمة src/services/supabaseSyncService.js
+   - ترفع الرحلات والسائقين والمركبات والسندات والمستخدمين إلى Supabase.
+   - عند انقطاع الإنترنت تبقى البيانات في localStorage.
+   - عند رجوع الإنترنت تتم المزامنة تلقائيًا.
+
+2) ملف db/supabase_phase2_sync_migration.sql
+   - يضيف local_id وفهارس unique حتى يتم تحديث نفس السجل بدل تكراره.
+
+طريقة التشغيل:
+1) في Supabase SQL Editor شغّل:
+   db/supabase_phase1_schema.sql
+   ثم:
+   db/supabase_phase2_sync_migration.sql
+
+2) أنشئ ملف .env.local بجانب package.json واكتب:
+   REACT_APP_SUPABASE_URL=رابط_المشروع
+   REACT_APP_SUPABASE_ANON_KEY=anon_key
+
+3) شغّل:
+   npm install
+   npm start
+
+ملاحظات مهمة:
+- هذه المرحلة للتجربة والربط الأولي.
+- سياسات RLS الحالية مؤقتة للتطوير فقط.
+- المرحلة التالية ستكون: تسجيل دخول حقيقي وصلاحيات آمنة لكل مستخدم/شركة.

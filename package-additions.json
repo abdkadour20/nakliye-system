@@ -1,0 +1,8 @@
+{
+  "phase": "V7 Phase 3 PDF Engine",
+  "install": "npm install jspdf html2canvas",
+  "dependencies_to_add": {
+    "jspdf": "latest",
+    "html2canvas": "latest"
+  }
+}

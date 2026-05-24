@@ -1,0 +1,10 @@
+{
+  "name": "SEYİTOĞULLARI KILIÇBEY OTO TRANSFER",
+  "short_name": "OTO TRANSFER",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#12385c",
+  "description": "Araç transfer yönetim sistemi",
+  "icons": []
+}

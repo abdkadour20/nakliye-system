@@ -1,0 +1,14 @@
+PHASE 20 - Evrak ve Dosya Yönetimi
+
+Eklenenler:
+- Sefer, müşteri ve araç bazlı evrak yükleme
+- Drag & Drop dosya alanı
+- Görsel ve PDF önizleme
+- Kategori ve bağlantılı kayıt seçimi
+- Bitiş tarihi / evrak uyarıları
+- Evrak arama ve kategori filtresi
+- İndirme, önizleme ve silme işlemleri
+- LocalStorage içinde doküman arşivi
+
+Not:
+Büyük PDF/görsel dosyaları localStorage limitine takılabilir. Ticari kullanımda Firebase Storage veya Supabase Storage önerilir.

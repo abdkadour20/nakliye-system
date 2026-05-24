@@ -1,0 +1,13 @@
+نسخة مصححة لصفحة Cloud:
+- تم إلغاء لوحة Firebase القديمة من تبويب الإعدادات.
+- تبويب Cloud داخل Ayarlar أصبح يستخدم Supabase فقط.
+- ضع Publishable key فقط، ولا تضع Secret key.
+- Project URL مضبوط تلقائياً على مشروعك:
+  https://odclahiilyhfdbttywxw.supabase.co
+
+طريقة التشغيل:
+1) فك الضغط في مجلد جديد.
+2) افتح PowerShell داخل المجلد.
+3) شغل: npm install
+4) شغل: npm start
+5) افتح Ayarlar > Cloud، ثم الصق Publishable key واضغط Kaydet ve Bağlan.

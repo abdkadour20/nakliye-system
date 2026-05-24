@@ -1,0 +1,10 @@
+export const STORAGE_KEY = 'seyitogullari_final_v2_full_upgrade';
+export const USER_KEY = 'seyitogullari_users_v2';
+export const DRIVER_KEY = 'seyitogullari_drivers_v2';
+export const VEHICLE_KEY = 'seyitogullari_vehicles_v1';
+export const LOG_KEY = 'seyitogullari_logs_v2';
+export const AUTO_BACKUP_KEY = 'seyitogullari_auto_backup_v1';
+export const RECEIPT_KEY = 'seyitogullari_receipts_v1';
+export const BRAND_ASSETS_KEY = 'seyitogullari_brand_assets_v1';
+export const THEME_KEY = 'seyitogullari_theme_v1';
+export const COMPANY_SETTINGS_KEY = 'seyitogullari_company_settings_v1';

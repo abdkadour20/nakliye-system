@@ -1,0 +1,25 @@
+المرحلة 8 - زر Cloud'a Yükle داخل Evraklar
+
+ما الجديد:
+- زر واضح Cloud'a Yükle داخل تبويب Evraklar في نافذة الرحلة.
+- رفع صور/PDF إلى Supabase Storage bucket باسم evrak.
+- حفظ بيانات الملف داخل جدول evrak_files.
+- ربط الملف بالرحلة من خلال trip_local_id / serial.
+- عرض ملفات Cloud داخل نفس تبويب الرحلة.
+
+قبل التشغيل:
+1) افتح Supabase > SQL Editor.
+2) شغل db/phase8_cloud_upload_button.sql.
+3) تأكد أن Storage bucket اسمه evrak موجود و Public.
+4) شغل البرنامج:
+   npm install
+   npm start
+
+طريقة التجربة:
+- افتح أي رحلة.
+- ادخل تبويب Evraklar.
+- اختر نوع evrak.
+- اختر صورة أو PDF.
+- اضغط Cloud'a Yükle.
+- افتح Supabase > Storage > evrak وتأكد أن الملف موجود.
+- افتح Table Editor > evrak_files وتأكد أن السطر موجود.

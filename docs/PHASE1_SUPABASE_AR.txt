@@ -1,0 +1,31 @@
+المرحلة 1 - تجهيز Supabase
+
+ما تم إضافته:
+1) ملف اتصال Supabase:
+   src/services/supabaseClient.js
+
+2) ملف إعدادات تجريبي:
+   .env.example
+
+3) سكربت إنشاء الجداول:
+   db/supabase_phase1_schema.sql
+
+4) إضافة مكتبة Supabase إلى package.json:
+   @supabase/supabase-js
+
+خطواتك الآن:
+1) افتح supabase.com وأنشئ مشروعًا جديدًا.
+2) من SQL Editor انسخ محتوى db/supabase_phase1_schema.sql وشغّله.
+3) من Project Settings > API انسخ:
+   - Project URL
+   - anon public key
+4) أنشئ ملفًا باسم .env.local بجانب package.json وضع فيه:
+   REACT_APP_SUPABASE_URL=...
+   REACT_APP_SUPABASE_ANON_KEY=...
+5) شغّل:
+   npm install
+   npm start
+
+مهم:
+هذه المرحلة لا تنقل البيانات بعد. التخزين المحلي ما زال يعمل كما هو.
+المرحلة الثانية ستكون: نقل الرحلات والسائقين والمركبات والعملاء إلى Supabase مع بقاء نسخة Offline.

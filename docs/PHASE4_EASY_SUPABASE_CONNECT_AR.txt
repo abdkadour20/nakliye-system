@@ -1,0 +1,17 @@
+المرحلة 4 - ربط Supabase بدون تعديل ملفات
+
+تم تجهيز البرنامج بحيث لا تحتاج لفتح ملف .env يدويًا.
+
+الخطوات:
+1) في Supabase افتح SQL Editor.
+2) انسخ محتوى الملف: db/00_RUN_THIS_IN_SUPABASE.sql
+3) اضغط Run.
+4) شغّل البرنامج.
+5) افتح تبويب Cloud داخل البرنامج.
+6) ضع Publishable key فقط، وليس Secret key.
+7) اضغط: Kaydet ve Bağlan.
+8) بعد إعادة تحميل البرنامج اضغط: Manuel Senkronize Et.
+
+ملاحظة:
+Project URL موضوع مسبقًا:
+https://odclahiilyhfdbttywxw.supabase.co
