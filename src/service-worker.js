@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 const CACHE_NAME = 'seyitogullari-v5-cache';
 const ASSETS = ['/', '/index.html', '/manifest.json'];
 self.addEventListener('install', event => {
