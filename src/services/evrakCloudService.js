@@ -61,7 +61,7 @@ export function resolveEvrakStoragePath(record) {
 }
 
 function isSafeStorageKey(path) {
-  return Boolean(path) && /^[A-Za-z0-9!_.*'()\/-]+$/.test(path);
+return Boolean(path) && /^[A-Za-z0-9_.*/()-]+$/.test(path);
 }
 
 export function isEvrakCloudReady() {
