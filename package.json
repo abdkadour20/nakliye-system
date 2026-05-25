@@ -16,14 +16,43 @@
     "react-dom": "^19.2.6",
     "react-scripts": "5.0.1",
     "react-swipeable": "^7.0.2",
+    "web-push": "^3.6.7",
     "web-vitals": "^2.1.4",
     "workbox-core": "^7.4.1",
     "workbox-precaching": "^7.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "cross-env CI=false react-scripts build",
-    "test": "react-scripts test"
+    "build": "npm run check:secrets && npm run check:permissions && npm run check:rate-limit && npm run check:sessions && npm run check:background-sync && npm run check:push-notifications && npm run check:unit-tests && npm run check:integration-tests && npm run check:e2e-tests && npm run check:cicd && npm run check:release-channels && npm run check:automatic-deploy && npm run check:automated-backup && npm run check:offline-sync && cross-env CI=false react-scripts build",
+    "test": "react-scripts test --watchAll=false",
+    "check:secrets": "node scripts/check-secrets.js",
+    "check:permissions": "node scripts/check-server-permissions.js",
+    "check:sessions": "node scripts/check-session-expiration.js",
+    "check:background-sync": "node scripts/check-background-sync.js",
+    "check:push-notifications": "node scripts/check-push-notifications.js",
+    "test:unit": "react-scripts test --watchAll=false",
+    "test:ci": "CI=true react-scripts test --watchAll=false --runInBand",
+    "test:coverage": "CI=true react-scripts test --watchAll=false --coverage --runInBand",
+    "check:unit-tests": "node scripts/check-unit-tests.js",
+    "test:integration": "jest api/__integration__ --runInBand --env=node",
+    "test:all": "npm run test:unit && npm run test:integration && npm run test:e2e",
+    "check:integration-tests": "node scripts/check-integration-tests.js",
+    "test:e2e": "playwright test",
+    "test:e2e:headed": "playwright test --headed",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:report": "playwright show-report",
+    "check:e2e-tests": "node scripts/check-e2e-tests.js",
+    "ci:quality": "npm run check:secrets && npm run check:permissions && npm run check:rate-limit && npm run check:sessions && npm run check:background-sync && npm run check:push-notifications && npm run check:unit-tests && npm run check:integration-tests && npm run check:e2e-tests && npm run check:cicd && npm run check:release-channels && npm run check:automatic-deploy && npm run check:automated-backup && npm run check:offline-sync",
+    "ci:test": "npm run test:ci && npm run test:integration",
+    "ci:deploy-check": "npm run ci:quality && npm run ci:test && npm run build",
+    "ci:verify": "npm run ci:deploy-check",
+    "check:cicd": "node scripts/check-cicd.js",
+    "check:release-channels": "node scripts/check-release-channels.js",
+    "check:automatic-deploy": "node scripts/check-automatic-deploy.js",
+    "check:automated-backup": "node scripts/check-automated-backup.js",
+    "release:verify": "npm run ci:verify && npm run check:release-channels && npm run check:automatic-deploy && npm run check:automated-backup && npm run check:offline-sync",
+    "check:offline-sync": "node scripts/check-offline-sync.js",
+    "check:rate-limit": "node scripts/check-rate-limit.js"
   },
   "eslintConfig": {
     "extends": [
@@ -44,6 +73,47 @@
     ]
   },
   "devDependencies": {
+    "@playwright/test": "^1.60.0",
     "cross-env": "^10.1.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/services/**/*.{js,jsx}",
+      "api/_utils/**/*.js",
+      "api/_backend/security/**/*.js",
+      "!src/services/pdfEngine.js",
+      "!src/services/pdfService.js",
+      "!**/node_modules/**",
+      "api/__integration__/**/*.js",
+      "!api/__integration__/testHttp.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 20,
+        "branches": 15,
+        "functions": 20,
+        "lines": 20
+      },
+      "./api/_utils/tripValidation.js": {
+        "statements": 75,
+        "branches": 60,
+        "functions": 70,
+        "lines": 75
+      },
+      "./api/_backend/security/permissionPolicy.js": {
+        "statements": 80,
+        "branches": 65,
+        "functions": 80,
+        "lines": 80
+      }
+    }
+  },
+  "overrides": {
+    "@tootallnate/once": "^2.0.1",
+    "underscore": "^1.13.7",
+    "serialize-javascript": "^7.0.0",
+    "nth-check": "^2.1.1",
+    "uuid": "^11.1.1",
+    "postcss": "^8.5.10"
   }
 }
